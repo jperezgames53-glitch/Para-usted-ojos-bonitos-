@@ -15,63 +15,92 @@
     }
 
     .container {
-      max-width: 500px;
+      max-width: 520px;
       margin: auto;
     }
 
     h1 {
       text-align: center;
       font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    .row {
       margin-bottom: 40px;
     }
 
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      gap: 15px;
+    }
+
+    .row.reverse {
+      flex-direction: row-reverse;
+    }
+
     .character {
-      width: 120px;
-      border-radius: 10px;
-      margin-bottom: 10px;
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
     .bubble {
+      position: relative;
       background: #111;
       border: 2px solid #fff;
       border-radius: 20px;
       padding: 15px;
       font-size: 15px;
       line-height: 1.5;
-      position: relative;
+      max-width: 65%;
     }
 
-    /* cola de burbuja */
-    .bubble::after {
+    /* cola izquierda */
+    .bubble.left::after {
       content: "";
       position: absolute;
-      bottom: -15px;
-      left: 30px;
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top-color: #fff;
+      left: -14px;
+      top: 30px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
     }
 
-    .bubble::before {
+    .bubble.left::before {
       content: "";
       position: absolute;
-      bottom: -12px;
-      left: 31px;
-      width: 0;
-      height: 0;
-      border: 9px solid transparent;
-      border-top-color: #111;
+      left: -11px;
+      top: 31px;
+      border-width: 9px;
+      border-style: solid;
+      border-color: transparent #111 transparent transparent;
+    }
+
+    /* cola derecha */
+    .bubble.right::after {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: 30px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .bubble.right::before {
+      content: "";
+      position: absolute;
+      right: -11px;
+      top: 31px;
+      border-width: 9px;
+      border-style: solid;
+      border-color: transparent transparent transparent #111;
     }
 
     .final {
-      margin-top: 50px;
-      font-size: 16px;
+      margin-top: 60px;
       text-align: center;
+      font-size: 16px;
+      line-height: 1.6;
       opacity: 0.9;
     }
 
@@ -81,67 +110,67 @@
 
 <div class="container">
 
-  <h1>Para usted,ojos bonitos🤍</h1>
+  <h1>Para usted ❤️</h1>
 
   <div class="row">
     <img class="character" src="https://i.imgur.com/6g7wErp.jpg">
-    <div class="bubble">
+    <div class="bubble left">
       Si fuera Kakashi, me perdería más en su mirada que en el camino de la vida.
     </div>
   </div>
 
-  <div class="row">
+  <div class="row reverse">
     <img class="character" src="https://i.imgur.com/DTIGVZK.jpg">
-    <div class="bubble">
+    <div class="bubble right">
       Si fuera Itachi, sacrificaría mi vida con tal de cuidarla.
     </div>
   </div>
 
   <div class="row">
     <img class="character" src="https://i.imgur.com/eR2BvVg.jpg">
-    <div class="bubble">
-      Si fuera Shikamaru, lo único que no me daría pereza sería ir a verla.
+    <div class="bubble left">
+      Si fuera Shikamaru, lo único que no me daría fastidio sería ir a verla.
     </div>
   </div>
 
-  <div class="row">
+  <div class="row reverse">
     <img class="character" src="https://i.imgur.com/IAAxyik.jpg">
-    <div class="bubble">
+    <div class="bubble right">
       Si fuera Obito, cruzaría cualquier distancia solo por volver a usted.
     </div>
   </div>
 
   <div class="row">
     <img class="character" src="https://i.imgur.com/fKPKbbh.jpg">
-    <div class="bubble">
+    <div class="bubble left">
       Si fuera Haku, sería leal a usted sin importar nada más.
     </div>
   </div>
 
-  <div class="row">
+  <div class="row reverse">
     <img class="character" src="https://i.imgur.com/pPcwARV.jpg">
-    <div class="bubble">
+    <div class="bubble right">
       Si fuera Sasuke, regresaría siempre… solo por usted.
     </div>
   </div>
 
   <div class="row">
     <img class="character" src="https://i.imgur.com/M3QR9k0.jpg">
-    <div class="bubble">
-      Si fuera Naruto, no me rendiría nunca por usted.
+    <div class="bubble left">
+      Si fuera Naruto, no me rendiría nunca con usted.
     </div>
   </div>
 
-  <div class="row">
+  <div class="row reverse">
     <img class="character" src="https://i.imgur.com/j2uPS81.jpg">
-    <div class="bubble">
+    <div class="bubble right">
       Si fuera Minato, intentaría proteger cada momento con usted.
     </div>
   </div>
 
   <div class="final">
-    Y aun que no soy ninguno de ellos…<br><br>
-    sí que puedo hacer todo lo que ellos harían por usted🤍.
+    Y aunque no soy ninguno de ellos…<br><br>
+    sí que puedo hacer todo lo que ellos harían por usted.
   </div>
 
 </div>
